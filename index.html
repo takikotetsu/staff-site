@@ -193,6 +193,9 @@ img{display:block;max-width:100%}
 .promo-in{display:grid;grid-template-columns:1fr auto;gap:clamp(22px,4vw,56px);align-items:center}
 @media(max-width:700px){ .promo-in{grid-template-columns:1fr} }
 .promo-term{font-size:11px;letter-spacing:.26em;color:var(--muted)}
+/* 組み合わせの例外。本文より一段落として、読み飛ばされない程度の濃さにする */
+.promo-caveat{margin-top:16px;font-size:12px;letter-spacing:.04em;line-height:1.75;
+  color:var(--muted)}
 .promo-head{font-family:var(--display);font-size:clamp(19px,2.4vw,27px);letter-spacing:.1em;
   line-height:1.55;margin:13px 0 14px;text-wrap:balance}
 .promo-body{font-size:14px;color:var(--ink-soft);max-width:44em}
@@ -436,10 +439,11 @@ img{display:block;max-width:100%}
       <div class="promo-term">2026.11 — 2026.12　年末のご案内</div>
       <h2 class="promo-head">工程をまとめてのご依頼で、<br>撮影機材費またはグレーディング費を割引します。</h2>
       <p class="promo-body">
-        上記4名いずれかへのご依頼とあわせて、Kotetsu Inc. の撮影機材またはグレーディングを
-        併せてご発注いただいた場合、その費用を 30% 引きでお受けします。
+        上記4名いずれかへのご依頼に、Kotetsu Inc. の撮影機材またはグレーディングを
+        加えてご発注いただいた場合、その追加分を 30% 引きでお受けします。
         年内に動く案件はもちろん、年明け以降の撮影でも、この期間中にお声がけいただいた分は対象です。
       </p>
+      <p class="promo-caveat">※ 大淵へのご指名には、カメラマンまたは DIT の組み合わせが対象となります</p>
     </div>
     <div class="promo-figure">
       <div class="promo-num">30<span>% OFF</span></div>
