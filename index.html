@@ -113,11 +113,14 @@ img{display:block;max-width:100%}
   padding:15px 10px;border-left:1px solid var(--line)}
 .fields li:first-child{border-left:0}
 .brand{font-family:var(--display);letter-spacing:.34em;font-size:clamp(19px,2.6vw,26px);padding-left:.34em}
-.brand small{display:block;letter-spacing:.24em;font-size:10.5px;margin-top:9px;padding-left:.1em;color:var(--muted)}
-/* 会社のメインサイトと取り違えられないよう、社名の下にページの役割を添える */
-.brand em{display:flex;align-items:center;gap:13px;margin-top:17px;padding-left:.1em;
-  font-style:normal;font-size:12px;letter-spacing:.26em;color:var(--ink-soft)}
-.brand em::before{content:'';width:28px;height:1px;background:var(--line-strong);flex:none}
+.brand small{display:block;letter-spacing:.24em;font-size:10.5px;margin-top:11px;padding-left:.1em;color:var(--muted)}
+/* 会社のメインサイトと取り違えられないよう、社名の横にページの役割を添える */
+.brand-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px clamp(13px,2vw,24px)}
+.brand b{font-weight:400}
+.brand em{font-style:normal;font-size:12px;letter-spacing:.26em;color:var(--ink-soft);white-space:nowrap}
+/* 罫線が社名との区切りを兼ねる。文字の流れに乗せたいので inline-block で置く */
+.brand em::before{content:'';display:inline-block;width:clamp(20px,2.4vw,30px);height:1px;
+  margin-right:13px;vertical-align:.34em;background:var(--line-strong)}
 .lead{max-width:38em;font-size:16px;color:var(--ink-soft);
   display:flex;flex-direction:column;gap:1.2em}
 .lead p{margin:0}
@@ -252,7 +255,10 @@ img{display:block;max-width:100%}
 
 <header class="hero">
   <div class="wrap">
-    <div class="brand">株式会社虎徹<small>Kotetsu Inc.</small><em>スタッフのご紹介</em></div>
+    <div class="brand">
+      <div class="brand-row"><b>株式会社虎徹</b><em>スタッフのご紹介</em></div>
+      <small>Kotetsu Inc.</small>
+    </div>
 
     <div class="hero-grid">
       <div class="roster">
