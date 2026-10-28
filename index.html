@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>スタッフのご紹介 ｜ 株式会社虎徹</title>
+<meta name="description" content="株式会社虎徹に在籍するシネマトグラファー・カラリスト・DIT・ディレクター 12名のうち、4名のスタッフをご紹介します。撮影機材、DIT、グレーディングまで同じチームで対応します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="スタッフのご紹介 ｜ 株式会社虎徹">
+<meta property="og:description" content="撮影から仕上げまで、ひとつのチームで。株式会社虎徹のスタッフをご紹介します。">
+<meta property="og:url" content="https://staff.kotetsu.work/">
+<meta property="og:image" content="https://unoh-miku.work/img/7c19c787-96200019.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+
+<style>
+/* ============================================================
+   レイアウト：白地に明朝、罫線と余白だけで区切る縦一本。
+   4人の個人サイト（unoh-miku.work ほか）のトークンをそのまま使い、
+   キャンペーンの帯だけを罫線で囲って差し込む。
+   意図的に白地ひとつに決めている（4人のポートフォリオと同じ見え方にするため）。
+   ============================================================ */
+@font-face{
+  font-family:'SatsukiGendaiMincho';
+  src:url('fonts/SatsukiGendaiMincho.woff2') format('woff2');
+  font-weight:400;font-style:normal;font-display:swap;
+}
+:root{
+  color-scheme:light;
+  --paper:#ffffff;
+  --paper-2:#f5f4f2;
+  --ink:#141414;
+  --ink-soft:#4a4a4a;
+  --muted:#8c8c8c;
+  --line:rgba(20,20,20,.14);
+  --line-strong:rgba(20,20,20,.3);
+  /* 紺からティールへ。割引の案内だけに使う */
+  --navy:#16254d;
+  --navy-mid:#1a4a62;
+  --teal:#1c7068;
+  --teal-light:#2f9a8c;
+  --grad:linear-gradient(118deg,var(--navy) 0%,var(--navy-mid) 52%,var(--teal) 100%);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --display:'SatsukiGendaiMincho',"Hiragino Mincho ProN","Yu Mincho","游明朝",serif;
+  --serif:'SatsukiGendaiMincho',"Hiragino Mincho ProN","Yu Mincho","游明朝",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:15px;line-height:1.95;letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  /* 「す。」だけが最終行に残るような折り返しを避ける */
+  text-wrap:pretty;line-break:strict;
+}
+::selection{background:var(--ink);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.wrap{max-width:1180px;margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* ---------- 見出しの型（個人サイトと同じ） ---------- */
+.eyebrow{display:flex;align-items:center;gap:15px;font-size:12px;letter-spacing:.3em;color:var(--ink)}
+.eyebrow::before{content:'';width:34px;height:1px;background:var(--ink)}
+.v-title{font-family:var(--display);font-size:clamp(23px,3vw,36px);letter-spacing:.14em;
+  line-height:1.3;margin-top:18px;font-weight:400;text-wrap:balance}
+.v-title small{display:block;font-size:.4em;letter-spacing:.28em;color:var(--muted);margin-top:14px}
+
+/* ---------- 扉 ---------- */
+.hero{padding-block:clamp(44px,8vh,86px) 0}
+/* キャッチは右カラムの先頭に置き、左の「12 Members」と同じ高さから始める */
+.hero-right{display:flex;flex-direction:column;gap:clamp(30px,5vh,54px);padding-top:15px}
+/* 行間のぶん文字が下がって見えるので、その分だけ引き上げて「12」と頭を揃える */
+.hero-copy{font-family:var(--display);font-weight:400;
+  font-size:clamp(28px,4.4vw,52px);letter-spacing:.1em;line-height:1.5;
+  margin:-.31em 0 0;text-align:right;text-wrap:balance}
+@media(max-width:760px){
+  .hero-right{padding-top:0;gap:26px}
+  .hero-copy{text-align:left;margin-top:0}
+  /* 狭い画面では職能一覧と領域の帯を省く。本文でどちらも触れているため */
+  .roster,.fields{display:none}
+}
+
+.hero-grid{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);
+  gap:clamp(28px,6vw,76px);margin-top:clamp(36px,6vh,64px);align-items:start}
+@media(max-width:760px){ .hero-grid{grid-template-columns:1fr;gap:30px} }
+
+/* 在籍の内訳。文章で列挙するより、数と職能で見せる */
+.roster{border-top:1px solid var(--ink);padding-top:15px}
+.roster-head{display:flex;align-items:baseline;gap:9px;margin-bottom:17px}
+.roster-num{font-family:var(--display);font-size:46px;line-height:.85;letter-spacing:-.02em}
+.roster-unit{font-size:10.5px;letter-spacing:.26em;color:var(--muted)}
+.roster ul{list-style:none}
+.roster li{display:flex;flex-direction:column;gap:3px;padding:9px 0;border-top:1px solid var(--line)}
+.roster li:first-child{border-top:0;padding-top:0}
+.roster li span{font-size:12.5px;letter-spacing:.14em}
+.roster li em{font-style:normal;font-size:10.5px;letter-spacing:.1em;color:var(--muted)}
+
+/* 扱う領域。扉の足元に一列で置く */
+.fields{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  margin-top:clamp(40px,7vh,74px)}
+.fields ul{list-style:none;display:flex;flex-wrap:wrap}
+/* 罫線の幅をそろえたいので、横いっぱいを等分して文字は中央に置く */
+.fields li{flex:1 1 0;min-width:0;text-align:center;text-indent:.26em;
+  font-size:11.5px;letter-spacing:.26em;color:var(--ink-soft);
+  padding:15px 10px;border-left:1px solid var(--line)}
+.fields li:first-child{border-left:0}
+.brand{font-family:var(--display);letter-spacing:.34em;font-size:clamp(19px,2.6vw,26px);padding-left:.34em}
+.brand small{display:block;letter-spacing:.24em;font-size:10.5px;margin-top:9px;padding-left:.1em;color:var(--muted)}
+/* 会社のメインサイトと取り違えられないよう、社名の下にページの役割を添える */
+.brand em{display:flex;align-items:center;gap:13px;margin-top:17px;padding-left:.1em;
+  font-style:normal;font-size:12px;letter-spacing:.26em;color:var(--ink-soft)}
+.brand em::before{content:'';width:28px;height:1px;background:var(--line-strong);flex:none}
+.lead{max-width:38em;font-size:16px;color:var(--ink-soft);
+  display:flex;flex-direction:column;gap:1.2em}
+.lead p{margin:0}
+.lead strong{color:var(--ink);font-weight:400}
+.lead-note{color:var(--ink);letter-spacing:.06em;padding-top:.4em}
+
+/* ---------- キャンペーンの帯（期間が終わったらこの section ごと外す） ---------- */
+/* 割引の案内。紺からティールへ。
+   ノイズのフィルタは粒が見えてしまうので使わず、
+   大きく広げた円形のグラデーションを重ねて滑らかに濃淡をつける。 */
+.promo{position:relative;isolation:isolate;overflow:hidden;
+  color:var(--paper);
+  padding-block:clamp(42px,7vh,74px);
+  background:
+    radial-gradient(135% 150% at 88% 12%, rgba(61,176,160,.60) 0%, rgba(61,176,160,0) 58%),
+    radial-gradient(120% 140% at 12% 92%, rgba(9,19,45,.62) 0%, rgba(9,19,45,0) 58%),
+    radial-gradient(110% 130% at 62% 115%, rgba(140,219,206,.26) 0%, rgba(140,219,206,0) 62%),
+    radial-gradient(100% 120% at 34% 8%, rgba(24,52,96,.45) 0%, rgba(24,52,96,0) 60%),
+    var(--grad)}
+.promo .promo-in{position:relative}
+.promo .promo-term{color:rgba(255,255,255,.66)}
+.promo .promo-body{color:rgba(255,255,255,.86)}
+.promo .promo-note{color:rgba(255,255,255,.66)}
+.promo ::selection{background:var(--paper);color:var(--navy)}
+
+/* 最上部の帯。黒ベタだとブラウザの枠と地続きに見えるので、
+   白地のまま数字だけを黒で抜いて目を引かせる。下の案内へ飛ぶ。 */
+.topbar{display:flex;align-items:center;justify-content:center;gap:clamp(11px,2vw,22px);
+  flex-wrap:wrap;color:var(--paper);
+  background:
+    radial-gradient(140% 320% at 86% 50%, rgba(61,176,160,.55) 0%, rgba(61,176,160,0) 62%),
+    radial-gradient(120% 300% at 10% 50%, rgba(9,19,45,.45) 0%, rgba(9,19,45,0) 60%),
+    var(--grad);
+  /* 画面最上部に出る帯なので、ノッチやステータスバーのぶんだけ内側へ逃がす */
+  padding-top:max(15px,env(safe-area-inset-top,0px));
+  padding-bottom:15px;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+  text-align:center;transition:background .4s var(--ease),color .4s var(--ease)}
+/* 地のグラデーションから文字を白く抜く。箱で囲うより数字が大きく見える */
+.topbar-badge{display:inline-flex;align-items:baseline;gap:5px;color:var(--paper);
+  font-family:var(--display);font-size:clamp(34px,5.2vw,50px);line-height:1;
+  letter-spacing:.03em;white-space:nowrap}
+.topbar-badge em{font-style:normal;font-size:.4em;letter-spacing:.14em}
+.topbar-copy{font-size:13px;letter-spacing:.1em;text-wrap:balance;word-break:auto-phrase}
+.topbar-term{font-size:10.5px;letter-spacing:.24em;color:rgba(255,255,255,.62);white-space:nowrap}
+.topbar-go{font-size:10.5px;letter-spacing:.2em;color:rgba(255,255,255,.62);white-space:nowrap;
+  transition:color .3s var(--ease)}
+.topbar:hover .topbar-go{color:var(--paper)}
+.topbar ::selection{background:var(--paper);color:var(--navy)}
+@media(max-width:700px){ .topbar-term,.topbar-go{display:none} }
+.promo-in{display:grid;grid-template-columns:1fr auto;gap:clamp(22px,4vw,56px);align-items:center}
+@media(max-width:700px){ .promo-in{grid-template-columns:1fr} }
+.promo-term{font-size:11px;letter-spacing:.26em;color:var(--muted)}
+.promo-head{font-family:var(--display);font-size:clamp(19px,2.4vw,27px);letter-spacing:.1em;
+  line-height:1.55;margin:13px 0 14px;text-wrap:balance}
+.promo-body{font-size:14px;color:var(--ink-soft);max-width:44em}
+.promo-figure{text-align:center;white-space:nowrap}
+.promo-num{font-family:var(--display);font-size:clamp(54px,9vw,96px);line-height:.9;letter-spacing:-.01em}
+.promo-num span{font-size:.42em;letter-spacing:.12em;margin-left:.1em}
+.promo-note{font-size:11px;letter-spacing:.2em;color:var(--muted);margin-top:11px}
+
+/* ---------- 4人 ---------- */
+.people{padding-block:clamp(44px,7vh,86px)}
+.wrap.people{padding-top:clamp(44px,7vh,86px)}
+.person{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:clamp(26px,5vw,66px);align-items:center;padding-block:clamp(34px,5vh,52px);
+  border-top:1px solid var(--line)}
+.person:first-of-type{border-top:0}
+@media(max-width:780px){ .person{grid-template-columns:1fr;gap:24px} }
+.person-pic{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+/* 各メンバーのサイトのトップと同じ動き。本番では site.json から全枚数を読む */
+.pslide{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.06);transition:opacity 1.6s var(--ease)}
+.pslide.on{opacity:1;transform:scale(1);transition:opacity 1.6s var(--ease),transform 7s linear}
+@media (prefers-reduced-motion:reduce){ .pslide{transform:none!important} }
+.person-name{font-family:var(--display);font-size:clamp(24px,3.2vw,34px);letter-spacing:.14em;line-height:1.25}
+.person-name small{display:block;font-size:.37em;letter-spacing:.28em;color:var(--muted);margin-top:11px}
+.person-role{margin-top:15px;font-size:11.5px;letter-spacing:.22em;color:var(--ink-soft)}
+.person-copy{margin-top:19px;font-size:15.5px;color:var(--ink-soft);max-width:34em}
+.person-works{margin-top:21px;border-top:1px solid var(--line);padding-top:14px}
+.person-works dt{font-size:10.5px;letter-spacing:.22em;color:var(--muted);margin-bottom:7px}
+.person-works dd{font-size:13px;color:var(--ink-soft);line-height:1.85}
+.person-link{display:inline-flex;align-items:center;gap:12px;margin-top:23px;
+  font-size:14px;letter-spacing:.1em;padding-bottom:6px;border-bottom:1px solid var(--ink);
+  transition:gap .5s var(--ease)}
+.person-link:hover{gap:19px}
+
+/* ---------- 体制 ---------- */
+.setup{border-top:1px solid var(--ink);padding-block:clamp(40px,6vh,70px)}
+.setup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:clamp(26px,4vh,40px);
+  background:var(--line)}
+@media(max-width:700px){ .setup-grid{grid-template-columns:1fr} }
+.setup-cell{background:var(--paper);padding:clamp(20px,3vw,28px)}
+.setup-cell h3{font-family:var(--display);font-size:16px;letter-spacing:.14em;font-weight:400}
+.setup-cell p{margin-top:12px;font-size:13.5px;color:var(--ink-soft);line-height:1.9}
+
+/* ---------- 問い合わせ ---------- */
+.contact{padding-block:clamp(44px,7vh,80px);text-align:center}
+.contact p{margin-top:16px;font-size:14.5px;color:var(--ink-soft);
+  text-wrap:balance;word-break:auto-phrase}
+.mailbox{display:inline-flex;align-items:center;gap:14px;margin-top:30px;padding-bottom:9px;
+  border-bottom:1px solid var(--ink);font-size:clamp(18px,2.6vw,27px);letter-spacing:.07em}
+.copy{background:none;border:1px solid var(--line-strong);border-radius:2px;
+  font:inherit;font-size:10.5px;letter-spacing:.16em;color:var(--ink-soft);
+  padding:5px 11px;cursor:pointer;white-space:nowrap;transition:.3s var(--ease)}
+.copy:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.each{margin-top:36px;display:flex;flex-wrap:wrap;gap:9px 30px;justify-content:center;
+  font-size:12.5px;color:var(--ink-soft);letter-spacing:.06em}
+.each span{white-space:nowrap}
+.each b{font-weight:400;color:var(--ink)}
+.foot{border-top:1px solid var(--line);margin-top:clamp(40px,6vh,64px);
+  padding-block:28px 10px;text-align:center;font-size:11px;letter-spacing:.18em;color:var(--muted)}
+/* 会社サイトへの入り口。この帯以外に出口がないので、下線を引いてリンクと分かるようにする */
+.foot a{display:inline-block;font-family:var(--display);font-size:14px;letter-spacing:.2em;
+  color:var(--ink);text-decoration:none;padding-bottom:4px;
+  border-bottom:1px solid var(--line-strong);transition:border-color .3s var(--ease)}
+.foot a:hover{border-bottom-color:var(--ink)}
+.foot em{display:block;font-style:normal;margin-top:11px;font-size:11px;letter-spacing:.16em}
+.foot small{display:block;margin-top:26px;font-size:11px;letter-spacing:.18em}
+</style>
+</head>
+<body>
+
+
+<a class="topbar" href="#promo">
+  <span class="topbar-badge">30<em>% OFF</em></span>
+  <span class="topbar-copy">工程をまとめてのご依頼で、撮影機材費またはグレーディング費を割引します</span>
+  <span class="topbar-term">2026.11 — 12</span>
+  <span class="topbar-go">詳しく ↓</span>
+</a>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">株式会社虎徹<small>Kotetsu Inc.</small><em>スタッフのご紹介</em></div>
+
+    <div class="hero-grid">
+      <div class="roster">
+        <div class="roster-head">
+          <span class="roster-num">12</span>
+          <span class="roster-unit">Members</span>
+        </div>
+        <ul>
+          <li><span>Cinematographer</span><em>シネマトグラファー</em></li>
+          <li><span>Colorist</span><em>カラリスト</em></li>
+          <li><span>DIT</span><em>デジタルイメージングテクニシャン</em></li>
+          <li><span>Camera Assistant</span><em>カメラアシスタント</em></li>
+          <li><span>Director</span><em>ディレクター</em></li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <h1 class="hero-copy">撮影から仕上げまで、<br>ひとつのチームで。</h1>
+
+        <div class="lead">
+        <p>
+          Kotetsu Inc. にはシネマトグラファー・カラリスト・DIT・カメラアシスタント、
+          そしてディレクターの総勢12名が在籍しています。
+          CM・ミュージックビデオ・ドラマ・ドキュメンタリー、写真広告、ライブ撮影・仕上げ、
+          とさまざまなフィールドで活躍しています。
+        </p>
+        <p>
+          <strong>撮影機材、DIT、グレーディングまで同じチームで動けるのが強みです。</strong>
+          もちろん撮影だけ、仕上げだけ、どちらのご相談でもお受けいたします。
+        </p>
+        <p class="lead-note">こちらのページでは、4名のスタッフをご紹介します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fields">
+    <div class="wrap">
+      <ul>
+        <li>CM</li><li>Music Video</li><li>Drama</li>
+        <li>Documentary</li><li>Photography</li><li>Live</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<main class="wrap people">
+  <div class="eyebrow">Members</div>
+  <h2 class="v-title">メンバー紹介<small>Members</small></h2>
+
+  <article class="person">
+    <div class="person-pic" data-slides><div class="pslide on" style="background-image:url(https://unoh-miku.work/img/7c19c787-96200019.jpg?s=md)" role="img" aria-label="宇納未育の作品"></div><div class="pslide" style="background-image:url(https://unoh-miku.work/img/dc4fe3dc-FH020015.jpg?s=md)" role="img" aria-label=""></div><div class="pslide" style="background-image:url(https://unoh-miku.work/img/466ef482-FH000019.jpg?s=md)" role="img" aria-label=""></div></div>
+    <div>
+      <h3 class="person-name">宇納未育<small>Miku Unoh</small></h3>
+      <div class="person-role">Cinematographer / Photographer</div>
+      <p class="person-copy">
+        CM・ミュージックビデオから、広告写真・ポートレートまで。
+        映像と写真のどちらも手がけます。映像と写真の両方が必要な案件で、
+        全体のトーンを一本に通せます。
+      </p>
+      <dl class="person-works">
+        <dt>Recent</dt>
+        <dd>Ora2 Premium ／ ブルボン ルマンド ／ 果汁グミ</dd>
+      </dl>
+      <a class="person-link" href="https://unoh-miku.work" target="_blank" rel="noopener">
+        作品を見る<span>↗</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="person">
+    <div class="person-pic" data-slides><div class="pslide on" style="background-image:url(https://hisamatsu-yuka.work/img/97b3757e-0824594_0018.jpg?s=md)" role="img" aria-label="久松友佳の作品"></div><div class="pslide" style="background-image:url(https://hisamatsu-yuka.work/img/cd62a985-0824594_0058.jpg?s=md)" role="img" aria-label=""></div><div class="pslide" style="background-image:url(https://hisamatsu-yuka.work/img/fc3462d4-0824594_0101.jpg?s=md)" role="img" aria-label=""></div></div>
+    <div>
+      <h3 class="person-name">久松友佳<small>Yuka Hisamatsu</small></h3>
+      <div class="person-role">Cinematographer</div>
+      <p class="person-copy">
+        お芝居ものから、かわいらしさ・ビューティーを追求する広告まで。
+        高い傾聴力で、監督や制作チームに寄り添います。
+      </p>
+      <dl class="person-works">
+        <dt>Recent</dt>
+        <dd>銀のスプーン 三ツ星グルメ ／ sumika「赤春花 feat. 幾田りら」／ 日清 MCTオイル</dd>
+      </dl>
+      <a class="person-link" href="https://hisamatsu-yuka.work" target="_blank" rel="noopener">
+        作品を見る<span>↗</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="person">
+    <div class="person-pic" data-slides><div class="pslide on" style="background-image:url(https://ohbuchi-yuka.work/img/2dcf230f-1.98.1_1.98.1.jpg?s=md)" role="img" aria-label="大淵友加の作品"></div><div class="pslide" style="background-image:url(https://ohbuchi-yuka.work/img/f918d5f3-1.437.1_1.437.1.jpg?s=md)" role="img" aria-label=""></div><div class="pslide" style="background-image:url(https://ohbuchi-yuka.work/img/1afcfe84-1.183.1_1.183.1.jpg?s=md)" role="img" aria-label=""></div></div>
+    <div>
+      <h3 class="person-name">大淵友加<small>Yuka Ohbuchi</small></h3>
+      <div class="person-role">Colorist</div>
+      <p class="person-copy">
+        映画・ドラマ、ミュージックビデオ、ライブ映像。
+        ジャンルを問わずグレーディングを担当します。
+        色だけではなく、撮影前のルック設計、映像の質感づくりまで、深く関わります。
+      </p>
+      <dl class="person-works">
+        <dt>Recent</dt>
+        <dd>大鵬薬品 チオビタ・ドリンク「夫婦は伝わっちゃう」篇 ／ Google AIモード ／ KAGOME「SMILE ON！」</dd>
+      </dl>
+      <a class="person-link" href="https://ohbuchi-yuka.work" target="_blank" rel="noopener">
+        作品を見る<span>↗</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="person">
+    <div class="person-pic" data-slides><div class="pslide on" style="background-image:url(https://kuwabara-sayoko.work/img/c7c26f8d-2.jpg?s=md)" role="img" aria-label="桑原紗代子の作品"></div><div class="pslide" style="background-image:url(https://kuwabara-sayoko.work/img/a3c25b56-19-2.jpg?s=md)" role="img" aria-label=""></div><div class="pslide" style="background-image:url(https://kuwabara-sayoko.work/img/54fd2166-17.jpg?s=md)" role="img" aria-label=""></div></div>
+    <div>
+      <h3 class="person-name">桑原紗代子<small>Sayoko Kuwabara</small></h3>
+      <div class="person-role">Director / Cinematographer</div>
+      <p class="person-copy">
+        Kotetsu Inc. 唯一のディレクターです。
+        撮影・編集・グレーディングまですべて担当でき、トーンとクオリティの一貫性に定評があります。
+        自主企画作品も積極的に手掛けています。
+      </p>
+      <dl class="person-works">
+        <dt>Recent</dt>
+        <dd>Tiny yawn「sparkler」MV ／ 音楽の調和　僕の中のカフカ ／ 余白を綴るシリーズ</dd>
+      </dl>
+      <a class="person-link" href="https://kuwabara-sayoko.work" target="_blank" rel="noopener">
+        作品を見る<span>↗</span>
+      </a>
+    </div>
+  </article>
+</main>
+
+<section class="setup">
+  <div class="wrap">
+    <div class="eyebrow">Setup</div>
+    <h2 class="v-title">撮影から仕上げまで<small>Equipment, DIT &amp; Grading</small></h2>
+    <div class="setup-grid">
+      <div class="setup-cell">
+        <h3>撮影機材</h3>
+        <p>カメラ・レンズ等の手配・コーディネート。所有機材だけでなく、あらゆる機材の手配までご対応いたします。</p>
+      </div>
+      <div class="setup-cell">
+        <h3>DIT</h3>
+        <p>現場でのデータ管理とバックアップ、ルックづくり。撮影後の工程に素材をそのまま渡せる形で整えます。カメラマン・カラリストとの連携もシームレスです。</p>
+      </div>
+      <div class="setup-cell">
+        <h3>グレーディング</h3>
+        <p>撮影時のルック設計から仕上げまで。自社スタジオなので、所属カメラマン・カラリストがじっくりと時間をかけて色作りができます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 年末のご案内。期間が終わったらこの section ごと外す -->
+<section class="promo" id="promo">
+  <div class="wrap promo-in">
+    <div>
+      <div class="promo-term">2026.11 — 2026.12　年末のご案内</div>
+      <h2 class="promo-head">工程をまとめてのご依頼で、<br>撮影機材費またはグレーディング費を割引します。</h2>
+      <p class="promo-body">
+        上記4名いずれかへのご依頼とあわせて、Kotetsu Inc. の撮影機材またはグレーディングを
+        併せてご発注いただいた場合、その費用を 30% 引きでお受けします。
+        年内に動く案件はもちろん、年明け以降の撮影でも、この期間中にお声がけいただいた分は対象です。
+      </p>
+    </div>
+    <div class="promo-figure">
+      <div class="promo-num">30<span>% OFF</span></div>
+      <div class="promo-note">撮影機材費／グレーディング費</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2 class="v-title">お問い合わせ<small>Contact</small></h2>
+    <p>どのメンバーに頼むか決まっていない段階でも、案件の内容をお聞かせいただければご提案します。</p>
+
+    <div class="mailbox">
+      <span id="addr">staff@kotetsu.work</span>
+      <button class="copy" id="copyBtn" type="button">コピー</button>
+    </div>
+
+    <div class="each">
+      <span><b>宇納未育</b>　miku@kotetsu.work</span>
+      <span><b>久松友佳</b>　yuka@kotetsu.work</span>
+      <span><b>大淵友加</b>　ohbuchi@kotetsu.work</span>
+      <span><b>桑原紗代子</b>　sayoko@kotetsu.work</span>
+    </div>
+
+    <div class="foot">
+      <a href="https://kotetsu.work" target="_blank" rel="noopener">kotetsu.work</a>
+      <em>会社案内・実績はこちら</em>
+      <small>© 2026 Kotetsu Inc.</small>
+    </div>
+  </div>
+</section>
+
+<script>
+/* メンバーのバナー：画面に入っている間だけ順に切り替える */
+document.querySelectorAll('[data-slides]').forEach((box) => {
+  const slides = [...box.children];
+  if (slides.length < 2) return;
+  let cur = 0, timer = null;
+  const step = () => {
+    slides[cur].classList.remove('on');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('on');
+  };
+  const io = new IntersectionObserver((es) => {
+    es.forEach((e) => {
+      if (e.isIntersecting && !timer) timer = setInterval(step, 5000);
+      else if (!e.isIntersecting && timer) { clearInterval(timer); timer = null; }
+    });
+  }, { threshold: .2 });
+  io.observe(box);
+});
+
+const btn = document.getElementById('copyBtn');
+btn.addEventListener('click', async () => {
+  const text = document.getElementById('addr').textContent.trim();
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.textContent = 'コピーしました';
+  } catch (_) {
+    // クリップボードが使えない環境では、代わりに選択状態にする
+    const r = document.createRange();
+    r.selectNodeContents(document.getElementById('addr'));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = '選択しました';
+  }
+  setTimeout(() => { btn.textContent = 'コピー'; }, 2200);
+});
+</script>
+
+</body>
+</html>
